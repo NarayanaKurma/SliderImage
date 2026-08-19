@@ -1,0 +1,78 @@
+/* 1. Matches the exact capitalization from your React JSX */
+.Main-conatiner {
+    display: flex;
+    justify-content: center; /* Centers the whole component on the screen */
+    align-items: center;
+    margin: 10px;
+}
+
+.image-container {
+    margin: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 400px;
+}
+
+/* Ensure the image fills the entire 500x400 container box nicely */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* 2. Added absolute position so icons sit directly over the image */
+.arrow {
+    position: absolute;
+    font-size: 2.5rem; /* Controls the size of the React-Icon arrows */
+    color: white; /* Changes icon color directly instead of background-color */
+    cursor: pointer;
+    z-index: 10; /* Ensures arrows sit on top of the image layout layer */
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.4)); /* Makes arrows highly visible on bright images */
+}
+
+/* 3. Corrected outer margins from 10rem to 1rem */
+.arrow-left {
+    left: 1rem;
+}
+
+.arrow-right {
+    right: 1rem;
+}
+
+/* Styling for the track container holding the indicator buttons */
+.circle-indicators {
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    gap: 4px;
+    z-index: 10;
+}
+
+.indicator:hover{
+    cursor: pointer;
+}
+
+/* Basic structural shape for your map buttons */
+.indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.Active{
+    background-color: white;
+}
+/* 4. Connected to your conditional ternary class strings from React */
+
+
+.InAcive {
+    background-color: rgb(72, 86, 97);
+}
